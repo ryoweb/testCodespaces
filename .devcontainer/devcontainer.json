@@ -1,0 +1,19 @@
+{
+  "name": "PHP & MySQL",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      },
+      "extensions": [
+        "felixfbecker.php-intellisense",
+        "bmewburn.vscode-intelephense-client"
+      ]
+    }
+  },
+  "forwardPorts": [3306, 8000],
+  "postCreateCommand": "docker-compose up -d"
+}
